@@ -1,0 +1,37 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    align-items: center;
+}
+
+h1
+{
+    color: deeppink;
+}
+
+h2
+{
+    color: darkviolet;
+}
+
+p
+{
+    color: rgb(74, 77, 81);
+}
+
+span
+{
+    color: rgb(233, 79, 212);
+}
+
+marquee
+{
+    background-color: black;
+    color: antiquewhite;
+}
