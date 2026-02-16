@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-Classes Example</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* 1) Link States (LVHA Order) */
+        a:link {
+            color: gray;
+        }
+
+        a:visited {
+            color: blue;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        /* 2) Focus */
+        input:focus {
+            background-color: lightgray;
+            outline: none;
+        }
+
+        /* 3) Language Selector */
+        p:lang(fr) {
+            font-style: italic;
+            color: darkgreen;
+        }
+
+        /* 4) Table Styling */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        tr:first-child {
+            background-color: rgb(213, 204, 204);
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(59, 57, 57);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>1) Link Pseudo-Classes</h2>
+
+    <ul>
+        <li><a href="https://example.com" target="_blank">Item-1</a></li>
+        <li><a href="https://google.com" target="_blank">Item-2</a></li>
+        <li><a href="https://wikipedia.org" target="_blank">Item-3</a></li>
+    </ul>
+
+    <hr>
+
+    <h2>2) Input Focus</h2>
+    <input type="text" placeholder="Click here to see focus effect">
+
+    <hr>
+
+    <h2>3) :lang() Selector</h2>
+    <p lang="fr">
+        Ceci est un paragraphe en français. This paragraph uses :lang(fr).
+    </p>
+
+    <hr>
+
+    <h2>4) Table with :first-child and :nth-child()</h2>
+
+    <table>
+        <tr>
+            <th>Head-1</th>
+            <th>Head-2</th>
+            <th>Head-3</th>
+            <th>Head-4</th>
+            <th>Head-5</th>
+        </tr>
+
+        <tr>
+            <td>Data-1</td>
+            <td>Data-2</td>
+            <td>Data-3</td>
+            <td>Data-4</td>
+            <td>Data-5</td>
+        </tr>
+
+        <tr>
+            <td>Data-6</td>
+            <td>Data-7</td>
+            <td>Data-8</td>
+            <td>Data-9</td>
+            <td>Data-10</td>
+        </tr>
+
+        <tr>
+            <td>Data-11</td>
+            <td>Data-12</td>
+            <td>Data-13</td>
+            <td>Data-14</td>
+            <td>Data-15</td>
+        </tr>
+
+        <tr>
+            <td>Data-16</td>
+            <td>Data-17</td>
+            <td>Data-18</td>
+            <td>Data-19</td>
+            <td>Data-20</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

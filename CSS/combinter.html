@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Combinators Example</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: rgb(70, 2, 39);
+            color: wheat;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: black;
+            padding: 10px;
+        }
+
+        /* 1) General Sibling Selector (~) */
+        #div1~span {
+            color: rgb(203, 203, 18);
+        }
+
+        /* 2) Adjacent Sibling Selector (+) */
+        .box+p {
+            color: rgb(200, 92, 10);
+            background-color: black;
+            padding: 5px;
+        }
+
+        /* 3) Child Selector (>) */
+        tr>td,
+        tr>th {
+            color: rgb(66, 187, 141);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Combinators Examples</h1>
+    <hr><br>
+
+    <!-- 1) General Sibling Selector (~) -->
+    <h2>
+        [ 1 ] ( ~ )
+        <mark>
+            The ~ (general sibling) selector applies CSS to all "span" elements
+            that come after a "div" element at the same level.
+        </mark>
+    </h2>
+    <br>
+
+    <div id="div1">
+        <span>This span is inside the div (Not affected).</span>
+    </div>
+
+    <br>
+
+    <span>This span comes after the div (Affected by ~ selector).</span>
+
+    <hr><br>
+
+    <!-- 2) Adjacent Sibling Selector (+) -->
+    <h2>
+        [ 2 ] ( + )
+        <mark>
+            The + (adjacent sibling) selector applies CSS to the first "p" element
+            that immediately comes after a "div" element at the same level.
+        </mark>
+    </h2>
+    <br>
+
+    <div class="box">
+        <p>This paragraph is inside div (Not affected).</p>
+    </div>
+
+    <p>This paragraph comes immediately after div (Affected by + selector).</p>
+
+    <p>This paragraph is NOT immediately after div (Not affected).</p>
+
+    <hr><br>
+
+    <!-- 3) Child Selector (>) -->
+    <h2>
+        [ 3 ] ( > )
+        <mark>
+            The > (child selector) applies CSS to all elements that are direct
+            children of a specified parent element.
+        </mark>
+    </h2>
+    <br>
+
+    <table border="2" cellspacing="10px">
+        <tr>
+            <th>Head-1</th>
+            <th>Head-2</th>
+            <th>Head-3</th>
+        </tr>
+
+        <tr>
+            <td>Data-1</td>
+            <td>Data-2</td>
+            <td>Data-3</td>
+        </tr>
+
+        <tr>
+            <td>Data-4</td>
+            <td>Data-5</td>
+            <td>Data-6</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
