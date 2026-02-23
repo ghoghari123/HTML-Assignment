@@ -4,13 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Pseudo-Classes Example</title>
+    <title>CSS Pseudo-Classes & Pseudo-Elements</title>
 
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f4f4f4;
             padding: 20px;
+        }
+
+        h1::before {
+            content: "✨ ";
+        }
+
+        h1::after {
+            content: " ✨";
         }
 
         /* 1) Link States (LVHA Order) */
@@ -33,13 +41,13 @@
         /* 2) Focus */
         input:focus {
             background-color: lightgray;
-            outline: none;
+            outline: 2px solid blue;
         }
 
         /* 3) Language Selector */
         p:lang(fr) {
-            font-style: italic;
-            color: darkgreen;
+            font-style: oblique;
+            color: rgb(25, 27, 25);
         }
 
         /* 4) Table Styling */
@@ -56,21 +64,32 @@
             border: 1px solid black;
         }
 
-        tr:first-child {
+        thead tr {
             background-color: rgb(213, 204, 204);
         }
 
-        tr:nth-child(even) {
+        tbody tr:nth-child(even) {
             background-color: rgb(59, 57, 57);
             color: white;
+        }
+
+        /* 5) Pseudo Elements */
+        .first::first-letter {
+            color: blue;
+            font-size: 2em;
+        }
+
+        .sec::first-line {
+            color: red;
         }
     </style>
 </head>
 
 <body>
 
-    <h2>1) Link Pseudo-Classes</h2>
+    <h1>Pseudo Class And Element</h1>
 
+    <h2>(1) Link Pseudo-Classes</h2>
     <ul>
         <li><a href="https://example.com" target="_blank">Item-1</a></li>
         <li><a href="https://google.com" target="_blank">Item-2</a></li>
@@ -79,61 +98,79 @@
 
     <hr>
 
-    <h2>2) Input Focus</h2>
+    <h2>(2) Input Focus</h2>
     <input type="text" placeholder="Click here to see focus effect">
 
     <hr>
 
-    <h2>3) :lang() Selector</h2>
+    <h2>(3) :lang() Selector</h2>
     <p lang="fr">
-        Ceci est un paragraphe en français. This paragraph uses :lang(fr).
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sapiente quos minima officia aliquid voluptas
+        voluptatibus magni quasi illum similique necessitatibus aspernatur mollitia ex id cum, eligendi maiores a iusto.
     </p>
 
     <hr>
 
-    <h2>4) Table with :first-child and :nth-child()</h2>
+    <h2>(4) Table with :first-child and :nth-child()</h2>
 
     <table>
-        <tr>
-            <th>Head-1</th>
-            <th>Head-2</th>
-            <th>Head-3</th>
-            <th>Head-4</th>
-            <th>Head-5</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>Head-1</th>
+                <th>Head-2</th>
+                <th>Head-3</th>
+                <th>Head-4</th>
+                <th>Head-5</th>
+            </tr>
+        </thead>
 
-        <tr>
-            <td>Data-1</td>
-            <td>Data-2</td>
-            <td>Data-3</td>
-            <td>Data-4</td>
-            <td>Data-5</td>
-        </tr>
+        <tbody>
+            <tr>
+                <td>Data-1</td>
+                <td>Data-2</td>
+                <td>Data-3</td>
+                <td>Data-4</td>
+                <td>Data-5</td>
+            </tr>
 
-        <tr>
-            <td>Data-6</td>
-            <td>Data-7</td>
-            <td>Data-8</td>
-            <td>Data-9</td>
-            <td>Data-10</td>
-        </tr>
+            <tr>
+                <td>Data-6</td>
+                <td>Data-7</td>
+                <td>Data-8</td>
+                <td>Data-9</td>
+                <td>Data-10</td>
+            </tr>
 
-        <tr>
-            <td>Data-11</td>
-            <td>Data-12</td>
-            <td>Data-13</td>
-            <td>Data-14</td>
-            <td>Data-15</td>
-        </tr>
+            <tr>
+                <td>Data-11</td>
+                <td>Data-12</td>
+                <td>Data-13</td>
+                <td>Data-14</td>
+                <td>Data-15</td>
+            </tr>
 
-        <tr>
-            <td>Data-16</td>
-            <td>Data-17</td>
-            <td>Data-18</td>
-            <td>Data-19</td>
-            <td>Data-20</td>
-        </tr>
+            <tr>
+                <td>Data-16</td>
+                <td>Data-17</td>
+                <td>Data-18</td>
+                <td>Data-19</td>
+                <td>Data-20</td>
+            </tr>
+        </tbody>
     </table>
+
+    <hr>
+
+    <h2>Pseudo Element</h2>
+
+    <p class="first">Welcome to Tops Tech</p>
+
+    <p class="sec">
+        Welcome to Tops Tech <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque
+        molestiae pariatur deserunt, tenetur nisi, deleniti exercitationem laborum aut quia eligendi amet vel temporibus
+        in, voluptatibus delectus nobis et ut.
+    </p>
 
 </body>
 

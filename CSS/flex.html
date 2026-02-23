@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiteAvenue</title>
+    <link rel="shortcut icon" href="/media/images/restrant_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Inconsolata:wght@200..900&family=Oswald:wght@200..700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Smooch+Sans:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Inconsolata:wght@200..900&family=Oswald:wght@200..700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rancho&family=Smooch+Sans:wght@100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .container {
+            background: black;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(42, 1, 26, 0.5);
+        }
+
+        nav .logo h1 {
+            font-weight: bolder;
+            font-family: 'Playfair Display', serif;
+        }
+
+        nav .logo h1::first-letter {
+            font-size: 2.5rem;
+            color: crimson;
+            font-family: 'Great Vibes', cursive;
+        }
+
+        nav .middle-nav ul {
+            display: flex;
+            gap: 40px;
+            font-size: 1.2em;
+            list-style: none;
+        }
+
+        nav .middle-nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav .middle-nav ul li a:hover {
+            color: rgb(224, 143, 86);
+        }
+
+        nav .end-nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search {
+            position: relative;
+        }
+
+        nav .end-nav .search input {
+            border-radius: 4px;
+            padding: 10px 10px;
+            border: none;
+            left: -20px;
+        }
+
+        nav .end-nav #search button {
+            border-radius: 2%;
+            border: none;
+            background-color: rgb(84, 86, 86);
+            color: beige;
+            position: absolute;
+            right: 0px;
+            padding: 10px;
+        }
+
+        nav .end-nav #login {
+            border-radius: 5px;
+            padding: 9px 9px;
+            border: none;
+            background-color: rgb(84, 86, 86);
+            color: beige;
+            font-size: 0.9rem;
+        }
+
+        nav .end-nav #login:hover {
+            color: black;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="start-div">
+                <div class="logo" id="logo">
+                    <h1>BiteAvenue</h1>
+                </div>
+            </div>
+            <div class="middle-nav">
+                <ul>
+                    <li><a href="">home</a></li>
+                    <li><a href="">about</a></li>
+                    <li><a href="">services</a></li>
+                    <li><a href="">contact</a></li>
+                </ul>
+            </div>
+            <div class="end-nav">
+                <div class="search" id="search">
+                    <input type="text" placeholder="Search....">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <button id="login"><i class="fa-regular fa-user"></i></button>
+            </div>
+        </nav>
+        <section>
+
+        </section>
+    </div>
+</body>
+
+</html>
