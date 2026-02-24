@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BiteAvenue</title>
-    <link rel="shortcut icon" href="/media/images/restrant_favicon.png" type="image/x-icon">
+    <title>BiteAvenue | Home </title>
+    <link rel="shortcut icon" href="/media/images/favicon_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,11 +27,13 @@
         }
 
         .container {
-            background: black;
             color: white;
         }
 
         nav {
+            position: fixed;
+            width: 100%;
+            background: black;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -80,6 +82,7 @@
             padding: 10px 10px;
             border: none;
             left: -20px;
+            width: 250px;
         }
 
         nav .end-nav #search button {
@@ -104,6 +107,54 @@
         nav .end-nav #login:hover {
             color: black;
             background-color: aliceblue;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 40px;
+        }
+
+        main .box {
+            height: 500px;
+            width: 500px;
+            text-align: center;
+        }
+
+        #box-1 {
+            background-color: rgb(58, 58, 149);
+            border: 10px solid rgb(7, 7, 112);
+            border-radius: 5%;
+        }
+
+        #box-2 {
+            background-color: rgb(37, 180, 16);
+            border: 10px solid rgb(13, 79, 3);
+            border-radius: 5%;
+        }
+
+        #box-3 {
+            background-color: rgb(218, 96, 25);
+            border: 10px solid rgb(98, 40, 6);
+            border-radius: 5%;
+        }
+
+        #box-4 {
+            background-color: rgb(58, 58, 149);
+            border: 10px solid rgb(7, 7, 112);
+            border-radius: 5%;
+        }
+
+        #box-5 {
+            background-color: rgb(37, 180, 16);
+            border: 10px solid rgb(13, 79, 3);
+            border-radius: 5%;
+        }
+
+        #box-6 {
+            background-color: rgb(218, 96, 25);
+            border: 10px solid rgb(98, 40, 6);
+            border-radius: 5%;
         }
     </style>
 </head>
@@ -132,10 +183,19 @@
                 <button id="login"><i class="fa-regular fa-user"></i></button>
             </div>
         </nav>
-        <section>
-
-        </section>
     </div>
+    <main>
+        <div class="box" id="box-1">item-1</div>
+        <div class="box" id="box-2">item-2</div>
+        <div class="box" id="box-3">item-3</div>
+        <br>
+    </main>
+    <main>
+        <div class="box" id="box-4">item-1</div>
+        <div class="box" id="box-5">item-2</div>
+        <div class="box" id="box-6">item-3</div>
+        <br>
+    </main>
 </body>
 
 </html>
