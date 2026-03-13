@@ -1,0 +1,88 @@
+<!-- Create Registration form using HTML, CSS  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            padding: 80px;
+            /* background-color: palevioletred; */
+            background: linear-gradient(90deg,rgb(49, 14, 14),rgb(100, 42, 42),rgb(111, 10, 10));
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 3%;
+        }
+
+        form {
+            background-color: black;
+            color: blanchedalmond;
+            /* border: 3px solid blanchedalmond; */
+            width: 50%;
+            margin-left: 25%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 3%;
+            font-size: 1.5rem;
+            box-shadow: 10px 10px 20px black;
+            border-radius: 5px;
+        }
+
+        input,
+        textarea,
+        select {
+            border: 2px solid black;
+            padding: 10px;
+            background-color: blanchedalmond;
+        }
+
+        label,
+        input,
+        textarea,
+        select {
+            margin: 4%;
+        }
+
+        button {
+            color: white;
+            background-color: rgb(77, 75, 75);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SignUp</h1>
+    <form action="">
+        <label for="">Your Name</label>
+        <input type="text" placeholder="Enter Your Full Name">
+        <label for="">E-Mail</label>
+        <input type="email" placeholder="Enter Your E-mailo">
+        <label for="">User_Name</label>
+        <input type="text" placeholder="Enter Your Username">
+        <label for="">Cource</label>
+        <select name="" id="">
+            <option value="" disabled selected>--Select Here--</option>
+            <option value="">Full Stack Devloper</option>
+            <option value="">Python</option>
+            <option value="">Frontend Devloper</option>
+        </select>
+        <label for="" placeholder="Enter Your Phone_No">Phone_no</label>
+        <textarea name="" id="" placeholder="Enter Your Address...">Address</textarea>
+        <button>Submit</button>
+        <button>Reset</button>
+    </form>
+</body>
+
+</html>

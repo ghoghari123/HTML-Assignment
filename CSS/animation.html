@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            height: 80%;
+            width: 60%;
+            background: linear-gradient(rgb(107, 23, 23), rgb(154, 72, 72), rgb(142, 46, 46));
+            background-repeat: no-repeat;
+        }
+        .round img {
+            height: 400px;
+            width: 400px;
+            padding: 196.5px;
+            transform: translateX(-100%);
+            animation: imgani;
+            animation-delay: 0s;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes imgani {
+            0%{
+                transform: translate(-100%) rotate(180deg);
+            }
+            100%
+            {
+                transform:  translate(40px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="round" id="round">
+            <img src="/media/remove/gujrati_thali.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
