@@ -1,0 +1,226 @@
+<!-- Task: Create a 3x3 grid of product cards using CSS Grid. Each card should contain:
+o A product image.
+o A product title.
+o A price.
+Additional Requirements:
+o Use grid-template-columns to create the grid layout.
+o Use grid-gap to add spacing between the grid items.
+o Apply hover effects to each card for better interactivity -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid View Page</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* body section */
+        body {
+            background: linear-gradient(90deg, rgb(50, 77, 99), rgb(142, 206, 211), rgb(92, 139, 149), rgb(32, 113, 118));
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /* card section */
+        .card-container {
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr;
+            padding: 2rem;
+            margin-left: 6%;
+        }
+
+        .card {
+            margin: 2rem;
+            background-color: cadetblue;
+        }
+
+        .card:hover {
+            background-color: rgb(51, 67, 90);
+            box-shadow: 0px 0px 50px black;
+            transform: scale(0.3s);
+            color: azure;
+        }
+
+        /* img section */
+        img {
+            margin: 2rem;
+            height: 450px;
+            width: 400px;
+            border-radius: 3rem;
+            margin-left: 13%;
+            box-shadow: 0px 0px 20px rgb(0, 0, 0);
+        }
+
+        img:hover {
+            margin: 1rem;
+            margin-left: 14%;
+            transition: 0.5s ease-out;
+        }
+
+        /* content section */
+        .card-content {
+            margin: 1rem;
+            display: flex;
+            margin-top: -2%;
+            padding: 2rem;
+        }
+
+        #img1:hover {
+            content: url('imges/1_1.jpg');
+        }
+
+        #img2:hover {
+            content: url('imges/2_1.jpg');
+        }
+
+        #img3:hover {
+            content: url('imges/3_1.jpg');
+        }
+
+        #img4:hover {
+            content: url('imges/4_1.jpg');
+        }
+
+        #img5:hover {
+            content: url('imges/5_1.jpg');
+        }
+
+        #img6:hover {
+            content: url('imges/6_1.jpg');
+        }
+
+        #img7:hover {
+            content: url('imges/7_1.jpg');
+        }
+
+        #img8:hover {
+            content: url('imges/8_1.jpg');
+        }
+
+        #img9:hover {
+            content: url('imges/9_1.jpg');
+        }
+
+        #img10:hover {
+            content: url('imges/10_1.jpg');
+        }
+
+        #img11:hover {
+            content: url('imges/11_1.jpg');
+        }
+
+        #img12:hover {
+            content: url('imges/12_1.jpg');
+        }
+
+        /* card title */
+        .card-title {
+            font-size: 2rem;
+        }
+
+
+        /* card price */
+        .card-price {
+            margin-left: 100px;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card">
+            <img src="imges/1.jpg" alt="Img Not Found" id="img1">
+            <div class="card-content">
+                <div class="card-title"> Paint Colour </div>
+                <div class="card-price">190.00/-</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imges/2.jpg" alt="Img Not Found" id="img2">
+            <div class="card-content">
+                <div class="card-title">Eelctronics Product</div>
+                <div class="card-price">500.00/-</div>
+            </div>
+        </div>
+        <div class="card" id="card3">
+            <img src="imges/3.jpg" alt="Img Not Found" id="img3">
+            <div class="card-content">
+                <div class="card-title">Glamour Necklaces</div>
+                <div class="card-price">1000.00/-</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imges/4.jpg" alt="Img Not Found" id="img4">
+            <div class="card-content">
+                <div class="card-title">Classical Earings</div>
+                <div class="card-price">560.00/-</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imges/5.jpg" alt="Img Not Found" id="img5">
+            <div class="card-content">
+                <div class="card-title">Elegance Rings</div>
+                <div class="card-price">450.00/-</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imges/6.jpg" alt="Img Not Found" id="img6">
+            <div class="card-content">
+                <div class="card-title">Traveeling Bag</div>
+                <div class="card-price">890.00/-</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imges/7.jpg" alt="Img Not Found" id="img7">
+            <div class="card-content">
+                <div class="card-title">Couple Watch</div>
+                <div class="card-price">400.00/-</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imges/8.jpg" alt="Img Not Found" id="img8">
+            <div class="card-content">
+                <div class="card-title">Sport Shoees</div>
+                <div class="card-price">670.00/-</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imges/9.jpg" alt="Img Not Found" id="img9">
+            <div class="card-content">
+                <div class="card-title">Photo Frames</div>
+                <div class="card-price">120.00/-</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imges/10.jpg" alt="Img Not Found" id="img10">
+            <div class="card-content">
+                <div class="card-title">Lord Shiva Murti</div>
+                <div class="card-price">290.00/-</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imges/11.jpg" alt="Img Not Found" id="img11">
+            <div class="card-content">
+                <div class="card-title"> Dining Table</div>
+                <div class="card-price">1200.00/-</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imges/12.jpg" alt="Img Not Found" id="img12">
+            <div class="card-content">
+                <div class="card-title">Flowers Bucke</div>
+                <div class="card-price">350.00/-</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

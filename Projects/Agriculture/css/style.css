@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Inconsolata:wght@200..900&family=Oswald:wght@200..700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rancho&family=Smooch+Sans:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =============== NVIGATION BAR ==================== */
+.navbar {
+    background: linear-gradient(45deg, rgb(5, 5, 5), rgb(2, 54, 2));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ----- NAV LOGO IMAGE ----- */
+.logo h1 {
+    color: beige
+}
+
+.logo h1::first-letter {
+    font-size: 1.5em;
+    color: rgb(7, 114, 27);
+    font-family: "Great Vibes", cursive;
+}
+
+/* ----- NAV MENU  ----- */
+.nav-menu ul {
+    display: flex;
+    gap: 30px;
+    font-size: 1.2em;
+}
+
+.nav-menu ul li {
+    list-style: none;
+}
+
+.nav-menu ul li a {
+    color: antiquewhite;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* ----- NAV UNDERLINE EFFECT  ----- */
+.nav-menu ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 0;
+    background: lightgreen;
+    transition: 0.3s ease;
+}
+
+/* ----- NAV UNDERLINE HOVER EFFECT  ----- */
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* ----- NAV HOVER EFFECT  ----- */
+.nav-menu a:hover {
+    color: rgb(0, 255, 170);
+}
+
+/* ----- NAV ACTIONS  ----- */
+.nav-actions {
+    display: flex;
+    gap: 30px;
+    padding: 0px 80px;
+    position: relative;
+}
+
+.nav-actions .search input,
+.nav-actions .search button {
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+}
+
+.nav-actions .search input {
+    text-align: right;
+}
+
+/* ----- NAV ACTIONS HOVER EFFECTS ----- */
+.nav-actions .search input:hover {
+    background-color: rgb(215, 212, 212);
+    color: black;
+}
+
+.nav-actions .search button {
+    position: absolute;
+    left: 80.2px;
+    background-color: rgb(164, 164, 164);
+    color: rgb(0, 0, 0);
+    border-radius: none;
+    padding: 10px;
+}
+
+.icons {
+    display: flex;
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(164, 152, 152);
+    gap: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* ----- NAV ICONS HOVER EFFECTS  ----- */
+.icons i:hover {
+    color: chocolate;
+}
+
+/* =============== HERO SECTION ==================== */
+.hero-section {
+    height: 700px;
+    background: linear-gradient(rgb(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/media/images/bg_img_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-section:hover {
+    height: 700px;
+    background: linear-gradient(rgb(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/media/images/bg_img_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ----- HERO CONTENTS ----- */
+.hero-section .content {
+    padding: 90px;
+    line-height: 1.5;
+    /* animation: movingcontent 5s forwards linear; */
+}
+
+/* ----- HERO CONTENT TRANSFORM  ----- */
+@keyframes movingcontent {
+    0% {
+        transform: translate(-1500px);
+    }
+
+    100% {
+        transform: translate((20px));
+    }
+}
+
+.hero-section .content h2 {
+    color: antiquewhite;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    font-family: "Playfair Display", serif;
+}
+
+.hero-section .content p {
+    color: antiquewhite;
+    font-size: 2.5rem;
+    font-family: "Titillium Web", sans-serif;
+}
+
+/* ----- HERO BUTTONS  ----- */
+.hero-section .hero-btn {
+    display: flex;
+    align-self: first baseline;
+    padding: 0% 15%;
+    gap: 10px;
+    /* animation: movingbutton 5s linear forwards; */
+}
+
+.hero-section .hero-btn button {
+    padding: 5px;
+    width: 200px;
+    border-radius: 70px;
+    border: none;
+    background: rgb(255, 254, 254);
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+/* ----- HERO BUTTON TRANSFORM  ----- */
+@keyframes movingbutton {
+    0% {
+        transform: translateY(-1000px);
+    }
+
+    100% {
+        transform: translateY((10px));
+    }
+}
+
+/* ----- HERO HOVER EFFECT BUTTON  ----- */
+
+.hero-section .hero-btn button:hover {
+    background-color: black;
+    color: wheat;
+    border: 2px solid white;
+}

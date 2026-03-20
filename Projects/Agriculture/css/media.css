@@ -1,0 +1,60 @@
+@media screen and (max-width:768px) {
+
+    /* ----- NAV UNDERLINE EFFECT  ----- */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-menu {
+        padding: 10px;
+        order: 3;
+    }
+
+    .nav-actions {
+        display: flex;
+        align-self: center;
+        margin: 10px 0px;
+        order: 2;
+    }
+
+    /* =============== HERO SECTION ==================== */
+    .hero-section {
+        height: 100%;
+        background: linear-gradient(rgb(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/media/images/bg_img_1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-section:hover {
+        height: 100%;
+        background: linear-gradient(rgb(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/media/images/bg_img_2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-section .content {
+        padding: 90px;
+        line-height: 1.2;
+    }
+
+    .hero-section .content h2 {
+        font-size: 1rem;
+    }
+
+    .hero-section .content p {
+        color: antiquewhite;
+        font-size: 2rem;
+        font-family: "Titillium Web", sans-serif;
+    }
+
+    .hero-section .hero-btn {
+        padding: 0% 20%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+}
