@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Chokadi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(-45deg, #000000, #073232, #108282, #000000);
+            background-size: 400%;
+            animation: gradientMove 10s ease infinite;
+        }
+
+        .box {
+            height: 500px;
+            width: 500px;
+            border: 5px double rgba(0, 255, 255, 0.4);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            align-items: center;
+            text-align: center;
+            margin: 5% 31%;
+            padding: 10px;
+            border-radius: 5%;
+        }
+
+        #cells {
+            height: 150px;
+            width: 150px;
+            background: transparent;
+            margin: auto;
+            box-shadow: 2px 2px 5px rgba(0, 255, 255, 0.4);
+            border: 2px solid rgba(0, 255, 255, 0.4);
+            border-radius: 10%;
+        }
+
+        #cells span {
+            font-size: 5rem;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <div class="container title text-center pt-5 text-white">
+        <h1>Sun Chokadi ( O / X )</h1>
+        <div class="box">
+            <div class="box-1" id="cells"><span>O</span></div>
+            <div class="box-2" id="cells"><span>X</span></div>
+            <div class="box-3" id="cells"><span>O</span></div>
+            <div class="box-4" id="cells"><span>X</span></div>
+            <div class="box-5" id="cells"><span>O</span></div>
+            <div class="box-6" id="cells"><span>X</span></div>
+            <div class="box-7" id="cells"><span>O</span></div>
+            <div class="box-8" id="cells"><span>X</span></div>
+            <div class="box-9" id="cells"><span>O</span></div>
+        </div>
+    </div>
+</body>
+
+</html>

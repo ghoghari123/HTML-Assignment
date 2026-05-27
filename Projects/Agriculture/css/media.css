@@ -1,5 +1,7 @@
 @media screen and (max-width:768px) {
-
+    body{
+        background-color: white;
+    }
     /* ----- NAV UNDERLINE EFFECT  ----- */
     .navbar {
         display: flex;

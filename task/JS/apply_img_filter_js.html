@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPLY FILTER IMAGE USING JS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: gray;
+        }
+
+        .container {
+            margin: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 450px;
+            margin-top: 15px;
+        }
+
+        .setbtn {
+            display: inline;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .btn {
+            width: 100px;
+            border-radius: 10px;
+            border: none;
+            background-color: black;
+            color: azure;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="../miniwebsite/images/img_1.jpg" alt="" id="image">
+        <div class="setbtn">
+            <button class="btn" onclick="imgfilter('Blur')">Blur</button>
+            <button class="btn" onclick="imgfilter('Brightness')">Brightness</button>
+            <button class="btn" onclick="imgfilter('Contrast')">Contrast</button>
+            <button class="btn" onclick="imgfilter('Drop-shadow')">Drop-shadow</button>
+            <button class="btn" onclick="imgfilter('Grayscale')">Grayscale</button>
+            <button class="btn" onclick="imgfilter('Hue-rotate')">Hue-rotate</button>
+            <button class="btn" onclick="imgfilter('Invert')">Invert</button>
+            <button class="btn" onclick="imgfilter('Opacity')">Opacity</button>
+            <button class="btn" onclick="imgfilter('Saturate')">Saturate</button>
+            <button class="btn" onclick="imgfilter('Sepia')">Sepia</button>
+            <button class="btn" onclick="imgfilter('Url')">Url</button>
+            <button class="btn" onclick="imgfilter('Reset')">Reset</button>
+        </div>
+    </div>
+    <script>
+        function imgfilter(op) {
+            let image = document.getElementById('image');
+            switch (op) {
+                case 'Blur':
+                    image.style.filter = "blur(5px)";
+                    break;
+                case 'Brightness':
+                    image.style.filter = "brightness(150%)";
+                    break;
+                case 'Contrast':
+                    image.style.filter = "contrast(200%)";
+                    break;
+                case 'Drop-shadow':
+                    image.style.filter = "drop-shadow(5px 5px 10px white)";
+                    break;
+                case 'Grayscale':
+                    image.style.filter = "grayscale(100%)";
+                    break;
+                case 'Hue-rotate':
+                    image.style.filter = "hue-rotate(90deg)";
+                    break;
+                case 'Invert':
+                    image.style.filter = "invert(100%)";
+                    break;
+                case 'Opacity':
+                    image.style.filter = "opacity(30%)";
+                    break;
+                case 'Saturate':
+                    image.style.filter = "saturate(800%)";
+                    break;
+                case 'Sepia':
+                    image.style.filter = "sepia(100%)";
+                    break;
+                case 'Url':
+                    image.src = "../miniwebsite/images/img_2.jpg";
+                    break;
+                case 'Reset':
+                    image.src = "../miniwebsite/images/img_1.jpg";
+                    break;
+                default:
+
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

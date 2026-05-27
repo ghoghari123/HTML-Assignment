@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Quiz App</h1>
+
+    <!-- Instructions -->
+    <div class="instructions">
+      <h3>Instructions</h3>
+      <ul>
+        <li>Total Quiz Time: <b>25 Minutes</b></li>
+        <li>Each Question Time: <b>1 Minute</b></li>
+        <li>Each Correct Answer Gives: <b>1 Point</b></li>
+        <li>Total Questions: <b>25</b></li>
+        <li>Select one option for each question</li>
+        <li>After selecting answer, next question will appear automatically</li>
+        <li>Do not refresh the page during quiz</li>
+      </ul>
+    </div>
+
+    <!-- Overall Timer -->
+    <div id="overall-timer">Overall Time Left: 25:00</div>
+
+    <!-- Question Timer -->
+    <div id="timer">Question Time Left: 60</div>
+
+    <!-- Quiz Box -->
+    <div id="quiz-box">
+      <h2 id="question">Question here</h2>
+      <div id="options"></div>
+      <button id="next-btn" type="button">Next</button>
+    </div>
+
+    <!-- Result Box -->
+    <div id="result-box" class="hide">
+      <h2>Quiz Result</h2>
+      <p>Your Comepeted Quiz Time :  <span id="QuizTimeComleted"></span></p>
+      <p>Total Questions: <span id="totalQuestions"></span></p>
+      <p>Correct Answers: <span id="score"></span></p>
+      <p>Wrong Answers: <span id="wrongCount"></span></p>
+
+      <h3>Wrong Answers Review</h3>
+      <div id="wrongAnswers"></div>
+
+      <button type="button" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Arial, sans-serif;
+ }
+
+ body {
+     background: #0f172a;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+ }
+
+ /* FORM CONTAINER */
+ form {
+     background: #1e293b;
+     padding: 35px;
+     border-radius: 12px;
+     width: 550px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+     gap: 22px;
+     /* space between fields */
+ }
+
+ .form-grid {
+     margin-top: 5%;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 22px;
+ }
+
+ /* TITLE */
+ h2 {
+     text-align: center;
+     color: #f1f5f9;
+ }
+
+ /* EACH FIELD */
+ .form-group {
+     display: flex;
+     flex-direction: column;
+     gap: 6px;
+     /* space between label & input */
+ }
+
+ /* LABEL */
+ label {
+     color: #cbd5f5;
+     font-size: 14px;
+ }
+
+ /* INPUT */
+ input {
+     padding: 12px;
+     border-radius: 8px;
+     border: none;
+     outline: none;
+     background: #334155;
+     color: #fff;
+     transition: 0.3s;
+ }
+
+ input::placeholder {
+     color: #94a3b8;
+ }
+
+ /* BUTTON */
+ .btn {
+     margin-top: 5%;
+     padding: 12px;
+     border: none;
+     border-radius: 8px;
+     background: #3b82f6;
+     color: white;
+     font-weight: bold;
+     cursor: pointer;
+     transition: 0.3s;
+     width: 200px;
+     margin-left: 30%;
+ }
+
+ .btn:hover {
+     background: #2563eb;
+     box-shadow: 0 0 12px #3b82f6;
+ }
+
+ .table-container {
+     margin-top: 30px;
+     width: 100%;
+     max-width: 900px;
+ }
+
+ table {
+     width: 100%;
+     margin-top: 30px;
+     border-collapse: collapse;
+     background: #1e293b;
+     border-radius: 12px;
+     overflow: hidden;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+ }
+
+ /* HEADER */
+ thead {
+     background: #3b82f6;
+ }
+
+ thead th {
+     padding: 14px;
+     text-align: left;
+     color: white;
+     font-size: 14px;
+     letter-spacing: 0.5px;
+ }
+
+ /* BODY */
+ tbody td {
+     padding: 12px;
+     color: #e2e8f0;
+     border-bottom: 1px solid #334155;
+     font-size: 13px;
+ }
+
+ /* ROW HOVER EFFECT */
+ tbody tr:hover {
+     background: #334155;
+     transition: 0.3s;
+ }
+
+ /* ZEBRA STRIPES */
+ tbody tr:nth-child(even) {
+     background: #0f172a;
+ }
+
+ /* LAST ROW BORDER REMOVE */
+ tbody tr:last-child td {
+     border-bottom: none;
+ }
+
+ fieldset{
+    display: flex;
+    gap: 20px;
+    border: none;
+ }

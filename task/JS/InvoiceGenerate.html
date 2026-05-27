@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./invoice.js"></script>
+    <link rel="stylesheet" href="invoicecss.css">
+</head>
+
+<body>
+    <fieldset>
+        <form>
+            <h2>Invoice Form</h2>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Client Name</label>
+                    <input type="text" placeholder="Enter Client Name" id="clientname">
+                </div>
+
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="Enter Client E-mail" id="clientemail">
+                </div>
+
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" placeholder="Enter Client Address" id="clientaddress">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone No</label>
+                    <input type="text" placeholder="Enter Phone Number" id="clientphoneno">
+                </div>
+
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input type="text" placeholder="Enter Product Name" id="productname">
+                </div>
+
+                <div class="form-group">
+                    <label>Quantity</label>
+                    <input type="number" placeholder="Enter Quantity" id="qty">
+                </div>
+ 
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="number" placeholder="Enter Price" id="price">
+                </div>
+
+                <div class="form-group">
+                    <label>Tax</label>
+                    <input type="number" placeholder="Enter Tax" id="tax">
+                </div>
+
+                <div class="form-group">
+                    <label>Discount</label>
+                    <input type="number" placeholder="Enter Discount" id="discount">
+                </div>
+            </div>
+
+            <button class="btn" onclick="generateinvoice()" type="button">Submit</button>
+        </form>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Client Name</th>
+                        <th>E-mail</th>
+                        <th>Address</th>
+                        <th>Phone No</th>
+                        <th>Discription</th>
+                        <th>qty</th>
+                        <th>Price</th>
+                        <th>Amount</th>
+                        <th>Tax</th>
+                        <th>Discount</th>
+                        <th>Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="invoicedata">
+
+                </tbody>
+            </table>
+
+        </div>
+    </fieldset>
+</body>
+
+</html>

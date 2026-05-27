@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Simple Calculater</legend>
+        <label for="">N1 : </label>
+        <input type="text" name="" id="n1">
+        <label for="">N2 : </label>
+        <input type="text" name="" id="n2">
+        <br><br>
+        <input type="button" value="+" onclick="simple_cal('+')">
+        <input type="button" value="-" onclick="simple_cal('-')">
+        <input type="button" value="*" onclick="simple_cal('*')">
+        <input type="button" value="/" onclick="simple_cal('/')">
+        <input type="button" value="%" onclick="simple_cal('%')">
+        <br><br>
+        <div id="res"></div>
+    </fieldset>
+    <script>
+        function simple_cal(op){
+            let n1 = document.getElementById('n1').value;
+            let n2 = document.getElementById('n2').value;
+            n1 = Number(n1);
+            n2 = Number(n2);
+            let n3;
+            switch (op) {
+                case '+':
+                    n3 = `add = ${n1 + n2}`;
+                break;
+                case '-':
+                    n3 = `sub = ${n1 - n2}`;
+                break;
+                case '*':
+                    n3 = `mul = ${n1 * n2}`;
+                break;
+                case '/':
+                    n3 = `div = ${n1 / n2}`;
+                break;
+                case '%':
+                    n3 = `module = ${n1 % n2}`;
+                break;
+                default:
+                    alert("Invalid Choice..!");
+                break;
+            }
+            document.getElementById('res').innerHTML = n3;
+        }
+    </script>
+</body>
+
+</html>

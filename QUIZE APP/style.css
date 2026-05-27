@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f4f4f4);
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 25px;
+}
+
+/* Instructions */
+.instructions {
+    background: #f8f9fa;
+    border-left: 5px solid #0d6efd;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.instructions h3 {
+    margin-top: 0;
+    color: #0d6efd;
+}
+
+.instructions ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Timers */
+#overall-timer,
+#timer {
+    background: #0d6efd;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Quiz Box */
+#quiz-box {
+    margin-top: 20px;
+}
+
+/* Question */
+#question {
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 22px;
+}
+
+/* Options */
+.option {
+    display: block;
+    width: 100%;
+    background: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 12px;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.option:hover {
+    background: #eaf2ff;
+    border-color: #0d6efd;
+}
+
+/* Buttons */
+button {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0b5ed7;
+}
+
+/* Result Box */
+#result-box {
+    text-align: center;
+    padding: 20px;
+}
+
+#result-box h2 {
+    color: #198754;
+}
+
+#result-box h3 {
+    color: #0d6efd;
+}
+
+/* Hide Class */
+.hide {
+    display: none;
+}

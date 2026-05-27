@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, accusamus.
+    </p>
+    <button onclick="changetext()">Change Text</button>
+
+    <fieldset>
+        <form action="">
+            <label for="">Product Name</label>
+            <input type="text" name="" id="pname">
+            <br><br>
+            <label for="">Price</label>
+            <input type="text" name="" id="price">
+            <br><br>
+            <button type="button" onclick="gendata()">click</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="pdata">
+
+                </tbody>
+            </table>
+        </form>
+    </fieldset>
+    <script>
+        function changetext() {
+            let p = document.getElementById('p1');
+            let p1 = prompt('Enter Text : ');
+            p.textContent = p1;
+        }
+
+        function gendata() {
+            let pname = document.getElementById("pname").value;
+            let price = document.getElementById("price").value;
+            let str = `
+                <tr>
+                    <td> ${pname} </td>
+                    <td> ${price} </td>
+                </tr>
+            `
+            document.getElementById('pdata').innerHTML += str;
+        }
+    </script>
+</body>
+
+</html>
+
+
+<!-- Why usen Event Delegation?
+ "Event Delegation is a JS techniqe  where u attch a sigle event listener to a parent element instead of adding listener to multiple child elements."
+ "Bcz of event bubbing the event moves from the child up to the parent - so the parent can hanle it."
+
+-> important performane 
+-> Works for dynamically added elements
+-> Cleaner and more mainly  -->
